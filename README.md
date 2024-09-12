@@ -15,7 +15,9 @@ Coverting and Managing paths in rust is now made easy.
 - [Add to your project](#add-to-your-project)
 - [Features](#features)
 - [Usage](#usage)
+- [Pyo3 Bindings](#pyo3-bindings)
 - [Issues](#issues)
+- [Pull Requests](#pull-requests)
 
 ## Add to your project
 
@@ -213,6 +215,18 @@ In `v1.0.0` and above, the code has been divided into features due to growing fu
   - is_symlink
 
   - is_relative
+
+  Extras:
+
+  - if_extension
+
+    ```rust
+    let rpath = RPath::from("/abc.txt");
+    
+    if rpath.if_extension("txt") {
+      println!("The file is a text file!");
+    }
+    ```
 
 - Printing
 

@@ -465,6 +465,22 @@ impl RPath{
     pub fn is_symlink(&self) -> bool {
         self.path.is_symlink()
     }
+
+    ///
+    /// returns true if the RPath has the given extension. else false
+    /// ### Usage
+    /// ```
+    /// use rustypath::RPath;
+    /// 
+    /// let rpath = RPath::from("abc.txt");
+    /// if rpath.if_extension("txt") {
+    ///     println!("This is a text file.");
+    /// }
+    /// ```
+    #[cfg(feature = "Boolean")]
+    pub fn if_extension(&self, r#type: &str) -> bool {
+        self.convert_to_string().ends_with(r#type)
+    }
 }
 
 // as ref
