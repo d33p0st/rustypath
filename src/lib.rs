@@ -80,7 +80,7 @@ impl RPath{
     /// ```
     /// use rustypath::RPath;
     /// 
-    /// let rpath = RPath::from("/temp");
+    /// let mut rpath = RPath::from("/temp");
     /// rpath.join_multiple(vec!["abc", "aaa"]);
     /// 
     /// assert_eq!(rpath, RPath::from("/temp/abc/aaa"));

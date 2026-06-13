@@ -1,6 +1,6 @@
 [package]
 name = "rustypath"
-version = "1.2.1"
+version = "1.2.2"
 edition = "2021"
 repository = "https://github.com/d33p0st/rustypath"
 authors = ["Soumyo Deep Gupta <deep.main.ac@gmail.com>"]
@@ -13,7 +13,7 @@ categories = ["filesystem"]
 
 [dependencies]
 dirs = "5.0.1"
-pyo3 = { version = "0.22.2", features = ["extension-module"] }
+pyo3 = { version = "0.22.2", features = ["extension-module"], optional = true }
 
 [features]
 default = ["Creation", "Management", "Boolean", "Conversion"]
@@ -21,4 +21,4 @@ Boolean = []
 Management = []
 Conversion = []
 Creation = []
-pyo3-bindings = []
+pyo3-bindings = ["dep:pyo3", "pyo3/extension-module"]
